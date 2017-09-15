@@ -1,0 +1,51 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "donejs-helloworld",
+  "version": "0.3.0",
+  "description": "A quick template for demonstrating DoneJS (done-serve and done-autorender) on Glitch",
+  "steal": {
+    "main": "server.js",
+    "plugins": [
+      "steal-css"
+    ]
+  },
+  "scripts": {
+    "start": "done-serve"
+  },
+  "dependencies": {
+    "done-serve": "^1.4.0",
+    "steal-tools": "^1.8.4",
+    "done-autorender": "^1.3.1",
+    "can-util": "^3.10.6",
+    "steal-css": "^1.3.1",
+    "can-stache-bindings": "^3.8.0",
+    "can-route": "^3.2.3",
+    "can-stache": "^3.7.2",
+    "can-component": "^3.3.4",
+    "can-define": "^1.4.5",
+    "can-event": "^3.7.4",
+    "can-view-scope": "^3.3.5"
+  },
+  "engines": {
+    "node": "6.9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/#!/project/donejs-helloworld"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "donejs",
+    "canjs",
+    "stealjs",
+    "helloworld"
+  ],
+  "devDependencies": {
+    "done-component": "^1.0.0",
+    "donejs-cli": "^1.0.2"
+  },
+  "npmAlgorithm": "flat"
+}

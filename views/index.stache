@@ -1,0 +1,36 @@
+<html>
+<head>
+  <!-- The can-import tag loads assets, including JS, CSS (if you include the steal-css 
+      plugin in package.json, as is included in this project), and LESS (with steal-less).
+      
+      If you are defining components with can-component, using can-import to import
+      the component JS will make the component available to this template.
+      
+      Using the export-as="viewModel" attribute here sets the export from the app.js
+      file (".js" is implied if no extension or processor is specified) as the view 
+      model object for rendering this template. The value of the {{target}} magic tag below 
+      (and all other values and bindings) is pulled from the view model.
+  -->
+  <can-import from="app" export-as="viewModel" />
+   
+  <!-- Here's can-import importing a CSS file using the steal-css plugin (it's defined
+      as a plugin for StealJS in package.json).  The exclamation point at the end 
+      identifies this as an asset and not a JS module.  After the exclamation point, you
+      can identify the package to use to process the asset, or let StealJS choose a
+      default handler based on the asset file extension (e.g. steal-css for .css files).
+      
+      If you look at the code output you can see the CSS has been placed on the head
+      of the document in a style tag.  That's the function of steal-css.
+  -->
+  <can-import from="styles/index.css!" />
+</head>
+<body>
+   <can-import from="dynamic-component/" isResolved:to="*dynamicComponent"> 
+
+    <h1>Hello, {{target}}, and welcome to DoneJS!</h1>
+    <dynamic-component />
+    
+  </can-import>
+
+</body>
+</html>

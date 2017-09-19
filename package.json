@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "start": "done-serve"
+    "start": "done-serve --static --debug"
   },
   "dependencies": {
     "done-serve": "^1.4.0",

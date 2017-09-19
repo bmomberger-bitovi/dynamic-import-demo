@@ -25,12 +25,28 @@
   <can-import from="styles/index.css!" />
 </head>
 <body>
-   <can-import from="dynamic-component/" isResolved:to="*dynamicComponent"> 
+  <h1>Hello, and welcome to DoneJS!</h1>
+  <!-- <can-import from="dynamic-component/"/>
+  <can-import from="dynamic-component/"></can-import> 
+  <dynamic-component/> -->
+   {{#if later}}
+    <can-import from="dynamic-component/" 
+      *dynamic-component-promise
+      value:to="*dynamicComponentTag"
+      isResolved:to="*dynamicComponentResolved"
+      isPending:to="*dynamicComponentLoading"> 
 
-    <h1>Hello, {{target}}, and welcome to DoneJS!</h1>
+  {{#if *dynamicComponentPromise.value}}
+    <p>This is a promise</p>
+  {{/if}}
+
+    {{#if *dynamicComponentLoading}}
+      Loading...
+    {{/if}}
+    {{#if *dynamicComponentResolved}}
     <dynamic-component />
-    
+    {{/if}}
   </can-import>
-
+  {{/if}}
 </body>
 </html>
